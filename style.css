@@ -9,10 +9,28 @@
     border-radius: 12px;
 }
 
-.inpWindow{
+#displayscrin{
     width: 400px;
     margin-top: 30px;
     height: 50px;
     border-radius: 12px;
+    background-color: antiquewhite;
+    align-content: center;
+    text-align: end;
+    overflow-anchor: ;
     
+    
+
+}
+
+.numbtn{
+
+    width: 75px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: orangered;
+    color:antiquewhite;
+    text-decoration: solid;
+    font-size: 30px;
+    border-radius: 12px;
 }
