@@ -1,31 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="calcbody">
-        <form action="" id="Calculator">
-            <div id="displayscrin"><h3 id="inpWindow"></h3></div>
-            <div>
-                <button class="numbtn" type="button" id="no1">1</button>
-                <button class="numbtn" type="button" id="no2">2</button>
-
-
+        <form action="" id="Calculator" style="display: flexbox;">
+            <div id="displayscrin">
+                <h2 id="inpWindow"></h2>
             </div>
-        
+            <div style="display: flex; flex-direction: column;">
+                <div id="numberpad">
+                    <button class="numbtn" type="button" id="no1">1</button>
+                    <button class="numbtn" type="button" id="no2">2</button>
+                    <button class="numbtn" type="button" id="no3">3</button>
+                    <button class="numbtn" type="button" id="no4">4</button>
+                    <button class="numbtn" type="button" id="no5">5</button>
+                    <button class="numbtn" type="button" id="no6">6</button>
+                    <button class="numbtn" type="button" id="no7">7</button>
+                    <button class="numbtn" type="button" id="no8">8</button>
+                    <button class="numbtn" type="button" id="no9">9</button>
+                    <button class="numbtn" type="button" id="no0">0</button>
+
+
+                </div>
+                <div id="signpad">
+                    <button class="numbtn" type="button" id="plus">+</button>
+                    <button class="numbtn" type="button" id="minus">-</button>
+                    <button class="numbtn" type="button" id="mult">*</button>
+                    <button class="numbtn" type="button" id="divise">/</button>
+                    <button class="numbtn" type="button" id="squered">^2</button>
+                    <button class="numbtn" type="button" id="cubed">^3</button>
+
+                </div>
+            </div>
+
 
         </form>
 
 
 
     </div>
-    
+
 
 
     <script src="script.js"></script>
 </body>
+
 </html>

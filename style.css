@@ -2,22 +2,23 @@
 
     background-color: black;
     color: aquamarine;
+    display: flexbox;
     width: 500px;
     height: 500px;
-    display: flex;
-    justify-content: center;
     border-radius: 12px;
+    padding: 10px;
 }
 
 #displayscrin{
     width: 400px;
-    margin-top: 30px;
+    margin-top: 10px;
     height: 50px;
     border-radius: 12px;
     background-color: antiquewhite;
-    align-content: center;
+    color: brown;
     text-align: end;
-    overflow-anchor: ;
+    overflow: hidden;
+    justify-self: center;
     
     
 
@@ -33,4 +34,8 @@
     text-decoration: solid;
     font-size: 30px;
     border-radius: 12px;
+}
+#numberpad, #signpad{
+    display: flex;
+    
 }
