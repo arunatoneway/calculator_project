@@ -35,7 +35,15 @@
     font-size: 30px;
     border-radius: 12px;
 }
-#numberpad, #signpad{
-    display: flex;
+#numberpad{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    
+}
+
+#signpad{
+    display: grid;
+    grid-template-columns: auto auto;
     
 }

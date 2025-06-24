@@ -16,6 +16,8 @@ const mult = document.getElementById('mult')
 const divise = document.getElementById('divise')
 const squered = document.getElementById('squered')
 const cubed = document.getElementById('cubed')
+const equal = document.getElementById('equal')
+const clear = document.getElementById('clear')
 let wincont =""
 
 console.log(num1)
@@ -24,8 +26,10 @@ function adno(winText,btnval){
     winText += btnval;
     console.log(winText)
     return winText;
-
-    
+}
+function clrno(winText){
+    winText = winText.slice(0,winText.length - 1);
+    return winText;
 
 }
 
@@ -79,5 +83,11 @@ squered.addEventListener('click',() => {wincont = adno(wincont,"^2");
     document.getElementById('inpWindow').innerHTML = wincont;
 })
 cubed.addEventListener('click',() => {wincont = adno(wincont,"^3");
+    document.getElementById('inpWindow').innerHTML = wincont;
+})
+equal.addEventListener('click',() => {wincont = adno(wincont,"^3");
+    document.getElementById('inpWindow').innerHTML = wincont;
+})
+clear.addEventListener('click',() => {wincont = clrno(wincont);
     document.getElementById('inpWindow').innerHTML = wincont;
 })
