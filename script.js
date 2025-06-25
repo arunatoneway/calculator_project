@@ -28,6 +28,7 @@ function adno(winText, btnval) {
     return winText;
 }
 function clrno(winText) {
+    
     winText = winText.slice(0, winText.length - 1);
     return winText;
 
@@ -36,7 +37,7 @@ function clrno(winText) {
 function calc(winText) {
     let j = ""
 
-    let ad2 = ""
+    
 
     let final = ""
 
@@ -54,20 +55,29 @@ function calc(winText) {
 
         let y = winText[i];
         if (y == "+") {
+            let ad2 = ""
 
-            for (let r = i + 1; r <= winText.length + 1; r++) {
+            for (let r = i + 1; r <= winText.length; r++) {
 
 
 
                 let d = winText[r];
-                if (["+", "-", "*", "/", "^"].includes(winText[r]) || r == winText.length + 1) {
+                if (["+", "-", "*", "/", "^"].includes(winText[r])) {
+
+                    j = (1 * j) + (1 * ad2);
+                    final = j;
+                    i=i+1;
+                    break;
+
+                }
+                ad2 += d;
+                if ( r == winText.length - 1) {
 
                     j = (1 * j) + (1 * ad2);
                     final = j;
                     break;
 
                 }
-                ad2 += d;
 
 
             }
@@ -76,9 +86,17 @@ function calc(winText) {
 
         }
 
+        if (final =="") {
+
+            j += y;
+            
+        }else{
+            j = final;
+        }
+
+        
 
 
-        j += y;
 
 
     }
