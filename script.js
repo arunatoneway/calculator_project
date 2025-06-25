@@ -28,16 +28,87 @@ function adno(winText, btnval) {
     return winText;
 }
 function clrno(winText) {
-    
+
     winText = winText.slice(0, winText.length - 1);
     return winText;
 
 }
 
+function addsubmuldev(i, j, final, winText, y) {
+
+    let ad2 = ""
+
+    for (let r = i + 1; r <= winText.length; r++) {
+
+
+
+        let d = winText[r];
+        if (["+", "-", "*", "/", "^"].includes(winText[r])) {
+
+            if (y == "+") {
+                j = (1 * j) + (1 * ad2);
+                final = j;
+                i = i + 1;
+                return final;
+
+            } else if (y == "-") {
+
+                j = (1 * j) - (1 * ad2);
+                final = j;
+                i = i + 1;
+                return final;
+            } else if (y == "*") {
+
+                j = (1 * j) * (1 * ad2);
+                final = j;
+                i = i + 1;
+                return final;
+            } else if (y == "/") {
+
+                j = (1 * j) / (1 * ad2);
+                final = j;
+                i = i + 1;
+                return final;
+            }
+
+
+        }
+        ad2 += d;
+        if (r == winText.length - 1) {
+
+            if (y == "+") {
+                j = (1 * j) + (1 * ad2);
+                final = j;
+                return final;
+
+            } else if (y == "-") {
+
+                j = (1 * j) - (1 * ad2);
+                final = j;
+                return final;
+            } else if (y == "*") {
+
+                j = (1 * j) * (1 * ad2);
+                final = j;
+                return final;
+            } else if (y == "/") {
+
+                j = (1 * j) / (1 * ad2);
+                final = j;
+                return final;
+            }
+
+
+        }
+
+
+    }
+}
+
 function calc(winText) {
     let j = ""
 
-    
+
 
     let final = ""
 
@@ -54,47 +125,34 @@ function calc(winText) {
         }
 
         let y = winText[i];
+
+        
         if (y == "+") {
-            let ad2 = ""
+            final = addsubmuldev(i, j, final, winText, y);
 
-            for (let r = i + 1; r <= winText.length; r++) {
+        }else if (y == "-") {
 
+            final = addsubmuldev(i, j, final, winText, y);
 
+        }else if (y == "*") {
 
-                let d = winText[r];
-                if (["+", "-", "*", "/", "^"].includes(winText[r])) {
+            final = addsubmuldev(i, j, final, winText, y);
 
-                    j = (1 * j) + (1 * ad2);
-                    final = j;
-                    i=i+1;
-                    break;
+        }else if (y == "/") {
 
-                }
-                ad2 += d;
-                if ( r == winText.length - 1) {
-
-                    j = (1 * j) + (1 * ad2);
-                    final = j;
-                    break;
-
-                }
-
-
-            }
-
-
+            final = addsubmuldev(i, j, final, winText, y);
 
         }
 
-        if (final =="") {
+        if (final == "") {
 
             j += y;
-            
-        }else{
+
+        } else {
             j = final;
         }
 
-        
+
 
 
 
