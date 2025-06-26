@@ -112,6 +112,8 @@ function calc(winText) {
 
     let final = ""
 
+   
+
 
 
 
@@ -126,21 +128,35 @@ function calc(winText) {
 
         let y = winText[i];
 
-        
+
         if (y == "+") {
             final = addsubmuldev(i, j, final, winText, y);
 
-        }else if (y == "-") {
+        } else if (y == "-") {
 
             final = addsubmuldev(i, j, final, winText, y);
 
-        }else if (y == "*") {
+        } else if (y == "*") {
 
             final = addsubmuldev(i, j, final, winText, y);
 
-        }else if (y == "/") {
+        } else if (y == "/") {
 
             final = addsubmuldev(i, j, final, winText, y);
+
+        } else if (y == "^") {
+
+            if (winText[i + 1] == "2") {
+                final = j * j;
+                i = i + 1;
+                if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(winText[i + 1])) {
+                    return winText;
+
+                }
+            } else if (winText[i + 1] == "3") {
+                final = j * j * j;
+                i = i + 1;
+            }
 
         }
 
@@ -152,12 +168,15 @@ function calc(winText) {
             j = final;
         }
 
+        
+
 
 
 
 
 
     }
+
     return winText = final;
 
 
@@ -169,74 +188,119 @@ function calc(winText) {
 num1.addEventListener('click', () => {
     wincont = adno(wincont, "1");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 num2.addEventListener('click', () => {
     wincont = adno(wincont, "2");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 
 
 num3.addEventListener('click', () => {
     wincont = adno(wincont, "3");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 
 num4.addEventListener('click', () => {
     wincont = adno(wincont, "4");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 num5.addEventListener('click', () => {
     wincont = adno(wincont, "5");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 num6.addEventListener('click', () => {
     wincont = adno(wincont, "6");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 num7.addEventListener('click', () => {
     wincont = adno(wincont, "7");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 num8.addEventListener('click', () => {
     wincont = adno(wincont, "8");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 num9.addEventListener('click', () => {
     wincont = adno(wincont, "9");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 num0.addEventListener('click', () => {
     wincont = adno(wincont, "0");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 plus.addEventListener('click', () => {
     wincont = adno(wincont, "+");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 
 minus.addEventListener('click', () => {
     wincont = adno(wincont, "-");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 mult.addEventListener('click', () => {
     wincont = adno(wincont, "*");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 divise.addEventListener('click', () => {
     wincont = adno(wincont, "/");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 squered.addEventListener('click', () => {
     wincont = adno(wincont, "^2");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
 cubed.addEventListener('click', () => {
     wincont = adno(wincont, "^3");
     document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
+let count =0;
 equal.addEventListener('click', () => {
+
     wincont = calc(wincont);
     document.getElementById('inpWindow').innerHTML = wincont;
+    if (wincont != "") {
+
+        document.getElementById('equal').innerHTML = "AC";
+        document.getElementById('equal').style.backgroundColor = "red";
+        count = 1;
+
+    }else if(count == 1){
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+    }
+
 })
 clear.addEventListener('click', () => {
     wincont = clrno(wincont);
