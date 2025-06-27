@@ -10,6 +10,8 @@ const num7 = document.getElementById('no7')
 const num8 = document.getElementById('no8')
 const num9 = document.getElementById('no9')
 const num0 = document.getElementById('no0')
+const numdot = document.getElementById('nodot')
+
 const plus = document.getElementById('plus')
 const minus = document.getElementById('minus')
 const mult = document.getElementById('mult')
@@ -23,20 +25,78 @@ let wincont = ""
 console.log(num1)
 
 function adno(winText, btnval) {
-    winText += btnval;
-    console.log(winText)
-    return winText;
+
+    if (["+", "-", "*", "/", "^2", "^3", "."].includes(btnval)) {
+
+
+        if (winText[winText.length - 1] == btnval) {
+            return winText;
+        } else if (btnval == "+" && ["-", "*", "/"].includes(winText[winText.length - 1])) {
+            winText = winText.substring(0, winText.length - 1) + "+";
+            return winText;
+        } else if (btnval == "-" && ["+", "*", "/"].includes(winText[winText.length - 1])) {
+            winText = winText.substring(0, winText.length - 1) + "-";
+            return winText;
+        } else if (btnval == "*" && ["+", "-", "/"].includes(winText[winText.length - 1])) {
+            winText = winText.substring(0, winText.length - 1) + "*";
+            return winText;
+        } else if (btnval == "/" && ["+", "-", "*"].includes(winText[winText.length - 1])) {
+            winText = winText.substring(0, winText.length - 1) + "/";
+            return winText;
+        } else if (btnval == "^2" && ["+", "-", "*", "/"].includes(winText[winText.length - 1])) {
+            winText = winText.substring(0, winText.length - 1) + "^2";
+            return winText;
+        } else if (btnval == "^3" && ["+", "-", "*", "/"].includes(winText[winText.length - 1])) {
+            winText = winText.substring(0, winText.length - 1) + "^3";
+            return winText;
+        }
+
+        else {
+            winText += btnval;
+            console.log(winText)
+            return winText;
+        }
+
+    } else if (winText[winText.length - 2] == "^") {
+        winText = winText + "*" + btnval;
+        return winText;
+
+    }
+
+    else {
+        winText += btnval;
+        console.log(winText)
+        return winText;
+    }
+
 }
 function clrno(winText) {
 
-    winText = winText.slice(0, winText.length - 1);
-    return winText;
+
+
+    if (winText[winText.length - 2] == "^") {
+        winText = winText.substring(0, winText.length - 2);
+        return winText;
+
+    }
+    else {
+        winText = winText.toString();
+        winText = winText.substring(0, winText.length - 1);
+        if (winText == "") {
+
+            document.getElementById('equal').innerHTML = "=";
+            document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+        }
+        return winText;
+    }
 
 }
 
 function addsubmuldev(i, j, final, winText, y) {
+    let ad2 = "";
 
-    let ad2 = ""
+
 
     for (let r = i + 1; r <= winText.length; r++) {
 
@@ -73,7 +133,10 @@ function addsubmuldev(i, j, final, winText, y) {
 
 
         }
-        ad2 += d;
+        if (winText[winText.length - 3] != "^") {
+            ad2 += d;
+        }
+
         if (r == winText.length - 1) {
 
             if (y == "+") {
@@ -107,27 +170,18 @@ function addsubmuldev(i, j, final, winText, y) {
 
 function calc(winText) {
     let j = ""
-
-
-
     let final = ""
-
-   
-
-
-
 
     for (let i = 0; i < winText.length; i++) {
 
-
         let a = winText.length
+
         if (["+", "-", "*", "/", "^"].includes(winText[0]) || ["+", "-", "*", "/", "^"].includes(winText[a - 1])) {
             winText = ""
             return winText;
         }
 
         let y = winText[i];
-
 
         if (y == "+") {
             final = addsubmuldev(i, j, final, winText, y);
@@ -149,10 +203,7 @@ function calc(winText) {
             if (winText[i + 1] == "2") {
                 final = j * j;
                 i = i + 1;
-                if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(winText[i + 1])) {
-                    return winText;
 
-                }
             } else if (winText[i + 1] == "3") {
                 final = j * j * j;
                 i = i + 1;
@@ -168,7 +219,7 @@ function calc(winText) {
             j = final;
         }
 
-        
+
 
 
 
@@ -248,6 +299,12 @@ num0.addEventListener('click', () => {
     document.getElementById('equal').innerHTML = "=";
     document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
+numdot.addEventListener('click', () => {
+    wincont = adno(wincont, ".");
+    document.getElementById('inpWindow').innerHTML = wincont;
+    document.getElementById('equal').innerHTML = "=";
+    document.getElementById('equal').style.backgroundColor = "darkcyan";
+})
 plus.addEventListener('click', () => {
     wincont = adno(wincont, "+");
     document.getElementById('inpWindow').innerHTML = wincont;
@@ -285,7 +342,7 @@ cubed.addEventListener('click', () => {
     document.getElementById('equal').innerHTML = "=";
     document.getElementById('equal').style.backgroundColor = "darkcyan";
 })
-let count =0;
+let count = 0;
 equal.addEventListener('click', () => {
 
     wincont = calc(wincont);
@@ -293,10 +350,10 @@ equal.addEventListener('click', () => {
     if (wincont != "") {
 
         document.getElementById('equal').innerHTML = "AC";
-        document.getElementById('equal').style.backgroundColor = "red";
+        document.getElementById('equal').style.backgroundColor = "grey";
         count = 1;
 
-    }else if(count == 1){
+    } else if (count == 1) {
         document.getElementById('equal').innerHTML = "=";
         document.getElementById('equal').style.backgroundColor = "darkcyan";
     }
