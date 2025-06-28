@@ -11,6 +11,7 @@ const num8 = document.getElementById('no8')
 const num9 = document.getElementById('no9')
 const num0 = document.getElementById('no0')
 const numdot = document.getElementById('nodot')
+const off = document.getElementById('off')
 
 const plus = document.getElementById('plus')
 const minus = document.getElementById('minus')
@@ -21,7 +22,7 @@ const cubed = document.getElementById('cubed')
 const equal = document.getElementById('equal')
 const clear = document.getElementById('clear')
 let wincont = ""
-
+let onoff = 0;
 console.log(num1)
 
 function adno(winText, btnval) {
@@ -275,137 +276,253 @@ function calc(winText) {
 }
 
 num1.addEventListener('click', () => {
-    wincont = adno(wincont, "1");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "1");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
+
 })
 num2.addEventListener('click', () => {
-    wincont = adno(wincont, "2");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "2");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 
 
 num3.addEventListener('click', () => {
-    wincont = adno(wincont, "3");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "3");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 
 num4.addEventListener('click', () => {
-    wincont = adno(wincont, "4");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "4");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 num5.addEventListener('click', () => {
-    wincont = adno(wincont, "5");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "5");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 num6.addEventListener('click', () => {
-    wincont = adno(wincont, "6");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "6");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 num7.addEventListener('click', () => {
-    wincont = adno(wincont, "7");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "7");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 num8.addEventListener('click', () => {
-    wincont = adno(wincont, "8");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "8");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 num9.addEventListener('click', () => {
-    wincont = adno(wincont, "9");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "9");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 num0.addEventListener('click', () => {
-    wincont = adno(wincont, "0");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "0");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 numdot.addEventListener('click', () => {
-    wincont = adno(wincont, ".");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, ".");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
+})
+off.addEventListener('click', () => {
+    if (onoff == 1) {
+
+        document.getElementById('off').innerHTML = "ON";
+        document.getElementById('off').style.backgroundColor = "rgb(162, 19, 6)";
+        document.getElementById('inpWindow').innerHTML = wincont = "";
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+        onoff = 0;
+
+
+    } else {
+        document.getElementById('off').innerHTML = "OFF";
+        document.getElementById('off').style.backgroundColor = "green";
+        onoff = 1;
+    }
+
+
+
 })
 plus.addEventListener('click', () => {
-    wincont = adno(wincont, "+");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "+");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 
 minus.addEventListener('click', () => {
-    wincont = adno(wincont, "-");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "-");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 mult.addEventListener('click', () => {
-    wincont = adno(wincont, "*");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "*");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 divise.addEventListener('click', () => {
-    wincont = adno(wincont, "/");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "/");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 squered.addEventListener('click', () => {
-    wincont = adno(wincont, "^2");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "^2");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 cubed.addEventListener('click', () => {
-    wincont = adno(wincont, "^3");
-    document.getElementById('inpWindow').innerHTML = wincont;
-    document.getElementById('equal').innerHTML = "=";
-    document.getElementById('equal').style.backgroundColor = "darkcyan";
+    if (onoff == 1) {
+        wincont = adno(wincont, "^3");
+        document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })
 let count = 0;
 equal.addEventListener('click', () => {
 
-    wincont = calc(wincont);
+    if (onoff == 1) {
+        wincont = calc(wincont);
 
-    if (isNaN(wincont)) {
-        wincont = "Syntax Error";
-    }
+        if (isNaN(wincont)) {
+            wincont = "Syntax Error";
+        }
 
-    document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('inpWindow').innerHTML = wincont;
 
 
-    if (wincont != "") {
+        if (wincont != "") {
 
-        document.getElementById('equal').innerHTML = "AC";
-        document.getElementById('equal').style.backgroundColor = "grey";
-        count = 1;
+            document.getElementById('equal').innerHTML = "AC";
+            document.getElementById('equal').style.backgroundColor = "grey";
+            count = 1;
 
-    } else if (count == 1) {
-        document.getElementById('equal').innerHTML = "=";
-        document.getElementById('equal').style.backgroundColor = "darkcyan";
+        } else if (count == 1) {
+            document.getElementById('equal').innerHTML = "=";
+            document.getElementById('equal').style.backgroundColor = "darkcyan";
+        }
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
     }
 
 
 })
 clear.addEventListener('click', () => {
-    wincont = clrno(wincont);
-    document.getElementById('inpWindow').innerHTML = wincont;
+    if (onoff == 1) {
+        wincont = clrno(wincont);
+        document.getElementById('inpWindow').innerHTML = wincont;
+
+    } else {
+        alert("Please switch on the Calculator by cicking the ON button");
+    }
 })

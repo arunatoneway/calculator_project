@@ -77,4 +77,15 @@
     display: grid;
     grid-template-columns: auto auto;
 }
+#off{
+    width: 75px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: rgb(162, 19, 6);
+    color:antiquewhite;
+    text-decoration: solid;
+    font-size: 30px;
+    border-radius: 12px;
+
+}
 
