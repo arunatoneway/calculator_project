@@ -22,8 +22,8 @@
 #displayscrin{
     width: 400px;
     margin-top: 10px;
-    height: 50px;
-    padding: 15px;
+    height: auto;
+    padding: 0px;
     border-radius: 12px;
     background-color: antiquewhite;
     color: brown;
@@ -31,9 +31,15 @@
     align-items: center;
     overflow: hidden;
     justify-self: center;
+    position: relative;
     
     
 
+}
+#eqwindow{
+    position: absolute;
+    top: 10px;
+    
 }
 
 .numbtn{

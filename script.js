@@ -491,6 +491,7 @@ let count = 0;
 equal.addEventListener('click', () => {
 
     if (onoff == 1) {
+        let equcont = wincont;
         wincont = calc(wincont);
 
         if (isNaN(wincont)) {
@@ -498,6 +499,9 @@ equal.addEventListener('click', () => {
         }
 
         document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('eqwindow').style.color = "grey";
+        document.getElementById('eqwindow').style.height = "1px";
+        document.getElementById('eqwindow').innerHTML = equcont ;
 
 
         if (wincont != "") {
