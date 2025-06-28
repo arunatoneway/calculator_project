@@ -406,6 +406,7 @@ off.addEventListener('click', () => {
         document.getElementById('off').innerHTML = "ON";
         document.getElementById('off').style.backgroundColor = "rgb(162, 19, 6)";
         document.getElementById('inpWindow').innerHTML = wincont = "";
+        document.getElementById('eqwindow').innerHTML = "";
         document.getElementById('equal').innerHTML = "=";
         document.getElementById('equal').style.backgroundColor = "darkcyan";
         onoff = 0;
