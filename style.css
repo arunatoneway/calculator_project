@@ -1,19 +1,22 @@
 .calcbody{
 
-    background-color: rgb(17, 17, 17);
+    background-color: black;
     color: aquamarine;
-    padding: 12px;
+    display: flexbox;
+    width: 500px;
+    height: 500px;
     border-radius: 12px;
-    width: 100%
-
+    padding: 10px;
+    margin: auto;
 }
 
 #displayscrin{
-    width: 100%;
+    width: 400px;
     margin-top: 10px;
     height: 50px;
     border-radius: 12px;
     background-color: antiquewhite;
+    color: brown;
     text-align: end;
     overflow: hidden;
     justify-self: center;
@@ -24,7 +27,7 @@
 
 .numbtn{
 
-    width: auto;
+    width: 75px;
     height: 50px;
     margin-top: 20px;
     background-color: orangered;
@@ -32,18 +35,9 @@
     text-decoration: solid;
     font-size: 30px;
     border-radius: 12px;
-    padding-inline: 30px;
 }
-.btnpad{
-    display: grid;
-    grid-template-columns: auto;
-    width: 100%;
-}
-
 #numberpad{
-    
     display: grid;
-    gap: 1px 20px;
     grid-template-columns: auto auto auto;
     justify-items: center;
     
@@ -51,37 +45,25 @@
 
 #signpad{
     display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-
-
-
-}
-.mixpad{
-    display: grid;
     grid-template-columns: auto auto;
-    justify-content: center;
+    justify-items: center;
 
 }
 
 .signbtn{
 
-    padding-inline: 30px;
+    width: 75px;
     height: 50px;
     margin-top: 20px;
-    margin: 16px;
     background-color: darkcyan;
     color:antiquewhite;
     text-decoration: solid;
     font-size: 30px;
-    
     border-radius: 12px;
-    box-shadow: 0 1px 5px black;
 }
 
-.sidsignpad{
+.btnpad{
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    justify-content: center;
-
+    grid-template-columns: auto auto;
 }
+
