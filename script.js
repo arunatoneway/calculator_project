@@ -43,12 +43,41 @@ function adno(winText, btnval) {
         } else if (btnval == "/" && ["+", "-", "*"].includes(winText[winText.length - 1])) {
             winText = winText.substring(0, winText.length - 1) + "/";
             return winText;
-        } else if (btnval == "^2" && ["+", "-", "*", "/"].includes(winText[winText.length - 1])) {
+        } else if (btnval == "^2" && ["+", "-", "*", "/",].includes(winText[winText.length - 1])) {
             winText = winText.substring(0, winText.length - 1) + "^2";
             return winText;
-        } else if (btnval == "^3" && ["+", "-", "*", "/"].includes(winText[winText.length - 1])) {
+        } else if (btnval == "^3" && ["+", "-", "*", "/",].includes(winText[winText.length - 1])) {
             winText = winText.substring(0, winText.length - 1) + "^3";
             return winText;
+        } else if (btnval == ".") {
+            if (winText.includes(".")) {
+                let dotint = winText.slice(winText.lastIndexOf(".", winText.length - 1), winText.length);
+                if (dotint.includes("+") || dotint.includes("-") || dotint.includes("*") || dotint.includes("/")) {
+                    winText += btnval;
+                    return winText;
+                } else if (winText[winText.length - 2] == "^") {
+                    winText = winText + "*" + btnval;
+                    return winText;
+
+                } else {
+                    return winText;
+                }
+            } else if (winText.lastIndexOf(".", winText.length - 1) == -1) {
+
+                if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].includes(winText)) {
+                    winText = winText + "."
+                    return winText;
+                } else if (winText == "") {
+                    winText = 0 + ".";
+                    return winText;
+                }
+                winText += btnval;
+                return winText;
+            }
+
+            else {
+                return winText;
+            }
         }
 
         else {
@@ -76,6 +105,12 @@ function clrno(winText) {
 
     if (winText[winText.length - 2] == "^") {
         winText = winText.substring(0, winText.length - 2);
+        return winText;
+
+    } else if (winText == "Syntax Error") {
+        winText = "";
+        document.getElementById('equal').innerHTML = "=";
+        document.getElementById('equal').style.backgroundColor = "darkcyan";
         return winText;
 
     }
@@ -106,26 +141,26 @@ function addsubmuldev(i, j, final, winText, y) {
         if (["+", "-", "*", "/", "^"].includes(winText[r])) {
 
             if (y == "+") {
-                j = (1 * j) + (1 * ad2);
+                j = ((10 * j) + (10 * ad2)) / 10;
                 final = j;
                 i = i + 1;
                 return final;
 
             } else if (y == "-") {
 
-                j = (1 * j) - (1 * ad2);
+                j = ((10 * j) - (10 * ad2)) / 10;
                 final = j;
                 i = i + 1;
                 return final;
             } else if (y == "*") {
 
-                j = (1 * j) * (1 * ad2);
+                j = ((10 * j) * (10 * ad2)) / 100;
                 final = j;
                 i = i + 1;
                 return final;
             } else if (y == "/") {
 
-                j = (1 * j) / (1 * ad2);
+                j = (10 * j) / (10 * ad2);
                 final = j;
                 i = i + 1;
                 return final;
@@ -140,23 +175,23 @@ function addsubmuldev(i, j, final, winText, y) {
         if (r == winText.length - 1) {
 
             if (y == "+") {
-                j = (1 * j) + (1 * ad2);
+                j = ((10 * j) + (10 * ad2)) / 10;
                 final = j;
                 return final;
 
             } else if (y == "-") {
 
-                j = (1 * j) - (1 * ad2);
+                j = ((10 * j) - (10 * ad2)) / 10;
                 final = j;
                 return final;
             } else if (y == "*") {
 
-                j = (1 * j) * (1 * ad2);
+                j = ((10 * j) * (10 * ad2)) / 100;
                 final = j;
                 return final;
             } else if (y == "/") {
 
-                j = (1 * j) / (1 * ad2);
+                j = (10 * j) / (10 * ad2);
                 final = j;
                 return final;
             }
@@ -201,11 +236,11 @@ function calc(winText) {
         } else if (y == "^") {
 
             if (winText[i + 1] == "2") {
-                final = j * j;
+                final = ((10 * j) * (j * 10)) / 100;
                 i = i + 1;
 
             } else if (winText[i + 1] == "3") {
-                final = j * j * j;
+                final = ((10 * j) * (10 * j) * (10 * j)) / 1000;
                 i = i + 1;
             }
 
@@ -346,7 +381,14 @@ let count = 0;
 equal.addEventListener('click', () => {
 
     wincont = calc(wincont);
+    
+    if (isNaN(wincont)) {
+        wincont = "Syntax Error";
+    }
+
     document.getElementById('inpWindow').innerHTML = wincont;
+
+
     if (wincont != "") {
 
         document.getElementById('equal').innerHTML = "AC";
@@ -357,6 +399,7 @@ equal.addEventListener('click', () => {
         document.getElementById('equal').innerHTML = "=";
         document.getElementById('equal').style.backgroundColor = "darkcyan";
     }
+
 
 })
 clear.addEventListener('click', () => {
