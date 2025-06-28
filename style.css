@@ -22,8 +22,7 @@
 #displayscrin{
     width: 400px;
     margin-top: 10px;
-    height: auto;
-    padding: 0px;
+    height: 100px;
     border-radius: 12px;
     background-color: antiquewhite;
     color: brown;
@@ -38,8 +37,15 @@
 }
 #eqwindow{
     position: absolute;
-    top: 10px;
-    
+    top: 1px;
+    right: 18px;
+    margin-bottom: 15px;
+}
+
+#inpWindow{
+    position: absolute;
+    bottom: 5px;
+    right: 18px;
 }
 
 .numbtn{

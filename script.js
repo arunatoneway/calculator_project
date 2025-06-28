@@ -491,17 +491,22 @@ let count = 0;
 equal.addEventListener('click', () => {
 
     if (onoff == 1) {
-        let equcont = wincont;
+        let equcont = wincont + " =";
         wincont = calc(wincont);
 
         if (isNaN(wincont)) {
             wincont = "Syntax Error";
+            equcont = ""
+        }
+        if (wincont == ""){
+            equcont = "";
         }
 
         document.getElementById('inpWindow').innerHTML = wincont;
         document.getElementById('eqwindow').style.color = "grey";
-        document.getElementById('eqwindow').style.height = "1px";
-        document.getElementById('eqwindow').innerHTML = equcont ;
+        document.getElementById('eqwindow').innerHTML = equcont;
+
+        
 
 
         if (wincont != "") {
@@ -513,6 +518,11 @@ equal.addEventListener('click', () => {
         } else if (count == 1) {
             document.getElementById('equal').innerHTML = "=";
             document.getElementById('equal').style.backgroundColor = "darkcyan";
+            document.getElementById('eqwindow').style.color = "grey";
+            document.getElementById('eqwindow').style.height = "1px";
+            equcont ="";
+            document.getElementById('eqwindow').innerHTML = equcont;
+
         }
 
     } else {
@@ -525,6 +535,7 @@ clear.addEventListener('click', () => {
     if (onoff == 1) {
         wincont = clrno(wincont);
         document.getElementById('inpWindow').innerHTML = wincont;
+        document.getElementById('eqwindow').innerHTML = "";
 
     } else {
         alert("Please switch on the Calculator by cicking the ON button");
