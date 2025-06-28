@@ -283,7 +283,7 @@ num1.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 
 })
@@ -295,7 +295,7 @@ num2.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 
@@ -308,7 +308,7 @@ num3.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 
@@ -320,7 +320,7 @@ num4.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 num5.addEventListener('click', () => {
@@ -331,7 +331,7 @@ num5.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 num6.addEventListener('click', () => {
@@ -342,7 +342,7 @@ num6.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 num7.addEventListener('click', () => {
@@ -353,7 +353,7 @@ num7.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 num8.addEventListener('click', () => {
@@ -364,7 +364,7 @@ num8.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 num9.addEventListener('click', () => {
@@ -375,7 +375,7 @@ num9.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 num0.addEventListener('click', () => {
@@ -386,7 +386,7 @@ num0.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 numdot.addEventListener('click', () => {
@@ -397,7 +397,7 @@ numdot.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 off.addEventListener('click', () => {
@@ -429,7 +429,7 @@ plus.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 
@@ -441,7 +441,7 @@ minus.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 mult.addEventListener('click', () => {
@@ -452,7 +452,7 @@ mult.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 divise.addEventListener('click', () => {
@@ -463,7 +463,7 @@ divise.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 squered.addEventListener('click', () => {
@@ -474,7 +474,7 @@ squered.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 cubed.addEventListener('click', () => {
@@ -485,7 +485,7 @@ cubed.addEventListener('click', () => {
         document.getElementById('equal').style.backgroundColor = "darkcyan";
 
     } else {
-        alert("Please switch on the Calculator by cicking the ON button");
+        alert("Please switch on the Calculator by clicking the ON button");
     }
 })
 let count = 0;
