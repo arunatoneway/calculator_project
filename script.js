@@ -70,6 +70,10 @@ function adno(winText, btnval) {
                 } else if (winText == "") {
                     winText = 0 + ".";
                     return winText;
+                } else if (winText[winText.length - 2] == "^") {
+                    winText = winText + "*" + btnval;
+                    return winText;
+
                 }
                 winText += btnval;
                 return winText;
@@ -82,7 +86,6 @@ function adno(winText, btnval) {
 
         else {
             winText += btnval;
-            console.log(winText)
             return winText;
         }
 
@@ -381,7 +384,7 @@ let count = 0;
 equal.addEventListener('click', () => {
 
     wincont = calc(wincont);
-    
+
     if (isNaN(wincont)) {
         wincont = "Syntax Error";
     }
